@@ -55,7 +55,7 @@ String& String::operator = (const String &rhs)
 
 std::ostream& operator<<(std::ostream &os, const String &s)
 {
-    char *c = const_cast<char*>(s.c_str());
+    char *c = const_cast<char*>(s.c_str());//char *c = s.element;
     while (*c)
         os << *c++;
     return os;
